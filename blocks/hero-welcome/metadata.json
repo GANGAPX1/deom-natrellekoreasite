@@ -1,0 +1,16 @@
+{
+  "variantName": "hero-welcome",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "minimal",
+    "purpose": "welcome-hero",
+    "imagePattern": "background",
+    "structure": "heading + paragraph"
+  },
+  "contentPattern": "Full-bleed dark background image with a centered white welcome heading and a supporting introductory paragraph. No CTA buttons and no foreground image.",
+  "usage": "Top-of-page welcome banner introducing the site with a headline and short intro text over a full-width background image.",
+  "options": [],
+  "memberVariantIds": ["hero-welcome"]
+}

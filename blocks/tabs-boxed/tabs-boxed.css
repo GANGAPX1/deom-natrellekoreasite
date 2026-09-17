@@ -1,0 +1,295 @@
+/* Block: tabs-boxed
+   Warranty tab interface migrated from natrellekorea.co.kr (#tab_wrap + .menu_wrap).
+   Values extracted from source computed styles. Scoped to .tabs-boxed. */
+
+/* ---------- Tab bar (pills) ---------- */
+.tabs-boxed .tabs-boxed-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 100%;
+  margin: 0 0 24px;
+  padding: 0;
+  font-size: var(--body-font-size-xs);
+}
+
+@media (width >= 900px) {
+  .tabs-boxed .tabs-boxed-list {
+    gap: 4px;
+    font-size: var(--body-font-size-s);
+  }
+}
+
+.tabs-boxed .tabs-boxed-list button {
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--brand-navy);
+  border-radius: 50px;
+  padding: 0.7em 1.5em;
+  background-color: #fff;
+  color: var(--brand-navy);
+  font-family: var(--body-font-family);
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  text-overflow: unset;
+  overflow: unset;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tabs-boxed .tabs-boxed-list button p {
+  margin: 0;
+}
+
+.tabs-boxed .tabs-boxed-list button:hover {
+  background-color: var(--brand-navy);
+  color: #fff;
+}
+
+.tabs-boxed .tabs-boxed-list button[aria-selected='true'] {
+  background-color: var(--brand-navy);
+  color: #fff;
+  cursor: default;
+}
+
+/* ---------- Panel ---------- */
+.tabs-boxed .tabs-boxed-panel {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--text-color);
+}
+
+.tabs-boxed .tabs-boxed-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* inner content wrapper gets horizontal + bottom padding;
+   navy title bars break out to full width via negative margin */
+.tabs-boxed .tabs-boxed-panel > div {
+  padding: 0 24px 32px;
+}
+
+@media (width >= 900px) {
+  .tabs-boxed .tabs-boxed-panel > div {
+    padding: 0 40px 44px;
+  }
+}
+
+/* ---------- Section title bars (h3 = navy full-bleed) ---------- */
+.tabs-boxed .tabs-boxed-panel h3 {
+  margin: 40px -24px 28px;
+  padding: 22px 24px;
+  background-color: var(--brand-navy);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.tabs-boxed .tabs-boxed-panel h3:first-child {
+  margin-top: 0;
+}
+
+@media (width >= 900px) {
+  .tabs-boxed .tabs-boxed-panel h3 {
+    margin: 48px -40px 32px;
+    padding: 34px 40px;
+    font-size: 30px;
+  }
+
+  .tabs-boxed .tabs-boxed-panel h3:first-child {
+    margin-top: 0;
+  }
+}
+
+.tabs-boxed .tabs-boxed-panel h3 sup {
+  font-size: 0.6em;
+  color: #fff;
+}
+
+/* ---------- Subheadings (h4 = navy text) ---------- */
+.tabs-boxed .tabs-boxed-panel h4 {
+  margin: 0 0 9px;
+  color: var(--brand-navy);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@media (width >= 900px) {
+  .tabs-boxed .tabs-boxed-panel h4 {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Body text ---------- */
+/* stylelint-disable-next-line no-descending-specificity */
+.tabs-boxed .tabs-boxed-panel p {
+  margin: 0 0 8px;
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+  line-height: 1.6;
+}
+
+@media (width >= 900px) {
+  .tabs-boxed .tabs-boxed-panel p {
+    font-size: 16px;
+  }
+}
+
+.tabs-boxed .tabs-boxed-panel a {
+  color: var(--link-color);
+}
+
+/* parenthetical / note emphasis: gray italic */
+.tabs-boxed .tabs-boxed-panel em {
+  color: var(--text-color);
+  font-style: italic;
+}
+
+/* Q/A prompt markers (FAQ tabs). FAQ list items contain neither a number-badge
+   link nor an h4, and their only <em> elements are the leading "Q"/"A" labels,
+   so scoping by container reliably targets just those markers (parenthetical
+   ems live only in the number-process / document-box items). */
+.tabs-boxed .tabs-boxed-panel li:not(:has(> h4), :has(p > a)) > p > em:first-child {
+  margin-right: 8px;
+  color: var(--brand-navy);
+  font-size: 1.2em;
+  font-weight: 700;
+  font-style: normal;
+  vertical-align: -0.05em;
+}
+
+/* the "Q" prompt (first paragraph in the item) is teal */
+.tabs-boxed .tabs-boxed-panel li:not(:has(> h4), :has(p > a)) > p:first-child > em:first-child {
+  color: var(--brand-teal);
+}
+
+/* ---------- Lists ---------- */
+.tabs-boxed .tabs-boxed-panel ul {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tabs-boxed .tabs-boxed-panel li {
+  position: relative;
+  margin: 0;
+}
+
+/* ---------- Numbered process steps (li with "click" link + number) ---------- */
+.tabs-boxed .tabs-boxed-panel li:has(p a + em) {
+  padding: 26px 0 26px 60px;
+  border-top: 1px solid #eee;
+}
+
+.tabs-boxed .tabs-boxed-panel ul:has(li p a + em) {
+  margin-top: 0;
+}
+
+.tabs-boxed .tabs-boxed-panel li:has(p a + em):first-child {
+  border-top: none;
+}
+
+/* label column: the paragraph holding the "click" link + number badge */
+.tabs-boxed .tabs-boxed-panel li p:has(> a) {
+  position: absolute;
+  left: 0;
+  top: 26px;
+  width: 46px;
+  margin: 0;
+  text-align: center;
+}
+
+/* "click" label above the badge */
+.tabs-boxed .tabs-boxed-panel li p:has(> a) a {
+  display: block;
+  margin-bottom: 6px;
+  border: 1px solid var(--brand-teal);
+  border-radius: 20px;
+  padding: 1px 0;
+  color: var(--brand-teal);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+/* number badge: teal circle */
+/* stylelint-disable-next-line no-descending-specificity */
+.tabs-boxed .tabs-boxed-panel li p:has(> a) em {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--brand-teal);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* step title: the paragraph immediately after the label paragraph */
+.tabs-boxed .tabs-boxed-panel li p:has(> a) + p {
+  margin-top: 4px;
+  color: var(--brand-navy);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@media (width >= 900px) {
+  .tabs-boxed .tabs-boxed-panel li p:has(> a) + p {
+    font-size: 18px;
+  }
+}
+
+/* step content paragraphs (3rd onward): teal check bullet */
+.tabs-boxed .tabs-boxed-panel li:has(p a + em) > p:nth-of-type(n+3) {
+  position: relative;
+  padding-left: 22px;
+}
+
+.tabs-boxed .tabs-boxed-panel li:has(p a + em) > p:nth-of-type(n+3)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid var(--brand-teal);
+  border-bottom: 2px solid var(--brand-teal);
+  transform: rotate(-45deg);
+}
+
+/* ---------- Gray callout / document boxes (li containing an h4) ---------- */
+/* stylelint-disable-next-line no-descending-specificity */
+.tabs-boxed .tabs-boxed-panel li:has(> h4) {
+  margin: 12px 0;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+@media (width >= 900px) {
+  .tabs-boxed .tabs-boxed-panel li:has(> h4) {
+    padding: 30px 35px;
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.tabs-boxed .tabs-boxed-panel li:has(> h4) p {
+  margin: 0 0 6px;
+}
+
+/* strong emphasis inside body */
+.tabs-boxed .tabs-boxed-panel strong {
+  color: var(--brand-navy);
+}

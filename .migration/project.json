@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "deom-natrellekoreasite": {
+      "previewOrg": "GANGAPX1",
+      "previewSite": "deom-natrellekoreasite",
+      "contentHostUrl": "https://content.da.live/gangapx1/deom-natrellekoreasite/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}
