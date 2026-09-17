@@ -1,0 +1,16 @@
+{
+  "variantName": "tabs-boxed",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "purpose": "warranty-info-tabs",
+    "imagePattern": "mixed",
+    "structure": "label + rich content panel"
+  },
+  "contentPattern": "Tabbed interface with a horizontal row of boxed label buttons above bordered content panels. Each row is [tab label cell, tab content cell]; panels hold dense rich content (blue title bars, gray callout boxes, numbered steps, definition lists, contact blocks).",
+  "usage": "Multi-panel interactive tabs where authors add one row per tab: the first cell is the tab label, the second cell is the panel's rich content.",
+  "options": [],
+  "memberVariantIds": ["tabs-boxed"]
+}

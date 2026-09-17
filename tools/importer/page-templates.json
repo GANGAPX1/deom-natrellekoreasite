@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.natrellekorea.co.kr/"
+      ],
+      "representativeUrl": "https://www.natrellekorea.co.kr/",
+      "description": "Homepage: welcome hero banner over a warranty-program tabbed interface, closing with a contact notice.",
+      "urlPattern": "/",
+      "blocks": [
+        {
+          "name": "hero-welcome",
+          "instances": [
+            "#contents > div.background"
+          ]
+        },
+        {
+          "name": "tabs-boxed",
+          "instances": [
+            "#tab_wrap"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "hero",
+          "selector": [
+            "#contents > div.background"
+          ],
+          "style": "navy-blue",
+          "blocks": [
+            "hero-welcome"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "warranty-tabs",
+          "selector": [
+            "#tab_wrap"
+          ],
+          "style": null,
+          "blocks": [
+            "tabs-boxed"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc3",
+          "name": "contact-notice",
+          "selector": [
+            "#contents > div.contents_in > div.basic_in.compad_b"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#contents > div.contents_in > div.basic_in.compad_b"
+          ]
+        },
+        {
+          "id": "rc4",
+          "name": "footer",
+          "selector": [
+            "#footer"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

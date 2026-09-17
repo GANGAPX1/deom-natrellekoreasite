@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.natrellekorea.co.kr/",
+  "path": "index",
+  "timestamp": "2026-09-17T05:27:29.574Z",
+  "title": "한국애브비 내트럴코리아",
+  "template": "home",
+  "blocks": [
+    "hero-welcome",
+    "tabs-boxed"
+  ]
+}

@@ -1,20 +1,122 @@
+/* Footer — natrellekorea.co.kr
+   White background, gray text (#666), two bands (company info + legal),
+   divided by a 1px rule. Mobile-first; enhances at >= 900px. */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: #fff;
+  color: var(--text-color, #666);
+  font-family: var(--body-font-family);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer-content {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 48px 24px;
 }
 
-footer .footer p {
+/* ---------- Band 1: company info ---------- */
+footer .footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+footer .footer-logo {
   margin: 0;
 }
 
+footer .footer-logo img {
+  width: 240px;
+  max-width: 80%;
+  height: auto;
+}
+
+footer .footer-info-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+footer .footer-info-col {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+footer .footer-info-col p {
+  margin: 0;
+  color: var(--text-color, #666);
+}
+
+footer .footer-info-col p strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #303030;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ---------- Band 2: legal ---------- */
+footer .footer-legal {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgb(34 34 34 / 20%);
+}
+
+footer .footer-legal p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-color, #666);
+}
+
+footer .footer-legal p:last-child {
+  margin-bottom: 0;
+}
+
+footer .footer-legal a {
+  color: var(--link-color, #00abc7);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer .footer-legal a.footer-cookie-settings {
+  margin-left: 8px;
+  color: #303030;
+  font-weight: 400;
+}
+
+footer .footer-legal a:hover {
+  text-decoration: underline;
+}
+
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-content {
+    padding: 90px 64px;
+  }
+
+  footer .footer-info {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  footer .footer-logo img {
+    width: 285px;
+    max-width: none;
+  }
+
+  footer .footer-info-columns {
+    flex-direction: row;
+    gap: 56px;
+  }
+
+  footer .footer-legal {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+
+  footer .footer-legal p {
+    font-size: 14px;
   }
 }
